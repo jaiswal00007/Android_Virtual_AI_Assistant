@@ -7,7 +7,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody
 
 class GeminiAIHelper {
-    private val API_KEY = "AIzaSyByTw1v4lnBZVRJdjG51ebAaxdIah4ENOo"  // Secure this key
+    private val API_KEY = "YOUR_API_KEY"  // Secure this key
     private val client = OkHttpClient()
 
     fun getGeminiResponse(inputText: String, callback: (String) -> Unit) {
