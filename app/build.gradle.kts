@@ -53,3 +53,18 @@ dependencies {
 dependencies {
     implementation("com.airbnb.android:lottie:6.6.2")
 }
+dependencies {
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")  // For API requests
+    implementation ("org.json:json:20210307") // For handling JSON responses
+}
+
+//dependencies {
+//    implementation("com.google.cloud:google-cloud-dialogflow:0.121.0")
+//    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+//}
+//
+//dependencies {
+//    implementation ("com.google.auth:google-auth-library-oauth2-http:1.17.0")
+//    implementation ("com.squareup.okhttp3:okhttp:4.9.3'  // For making HTTP requests")
+//}
+
