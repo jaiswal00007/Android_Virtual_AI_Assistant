@@ -3,3 +3,10 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
 }
+
+
+buildscript {
+    dependencies {
+        classpath ("androidx.compose.compiler:compiler:1.5.14")
+    }
+}

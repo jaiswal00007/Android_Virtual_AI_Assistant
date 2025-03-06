@@ -33,6 +33,14 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        compose= true  // Enable Compose feature
+        mlModelBinding = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.14" // Specify Compose compiler version (use latest)
+    }
 }
 
 dependencies {
@@ -54,11 +62,41 @@ dependencies {
     implementation("com.airbnb.android:lottie:6.6.2")
 }
 dependencies {
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")  // For API requests
     implementation ("org.json:json:20210307") // For handling JSON responses
 }
+dependencies {
+    // Compose UI and Material3 dependencies
+    implementation("androidx.compose.ui:ui:1.4.0")
+    implementation("androidx.compose.material3:material3:1.2.0")  // Ensure consistency
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
+    implementation("androidx.navigation:navigation-compose:2.7.5") // Update to match material3 version
 
-//dependencies {
+    // Activity Compose
+    implementation("androidx.activity:activity-compose:1.8.2")
+
+    // ViewModel for Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+    // Lottie animations (optional for typing indicator)
+    implementation("com.airbnb.android:lottie-compose:6.1.0")
+
+    // Coroutine dependency
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+}
+dependencies {
+    implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.4.0-alpha09")
+}
+
+
+
+
+//dependencies {dependencies {
+//    implementation 'org.tensorflow:tensorflow-lite:2.11.0'
+//    implementation 'org.tensorflow:tensorflow-lite-support:2.11.0'
+//}
 //    implementation("com.google.cloud:google-cloud-dialogflow:0.121.0")
 //    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 //}
@@ -67,4 +105,3 @@ dependencies {
 //    implementation ("com.google.auth:google-auth-library-oauth2-http:1.17.0")
 //    implementation ("com.squareup.okhttp3:okhttp:4.9.3'  // For making HTTP requests")
 //}
-

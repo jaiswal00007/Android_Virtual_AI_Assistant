@@ -1,0 +1,16 @@
+{
+  "youtube": 1,
+  "open": 2,
+  "start": 3,
+  "play": 4,
+  "music": 5,
+  "send": 6,
+  "whatsapp": 7,
+  "message": 8,
+  "search": 9,
+  "google": 10,
+  "what's": 11,
+  "the": 12,
+  "weather": 13,
+  "today": 14
+}
