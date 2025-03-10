@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="sap_primary">#0A6ED1</color>
+    <color name="sap_user_text">#1A2742</color>
+
 </resources>

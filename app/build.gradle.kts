@@ -69,7 +69,7 @@ dependencies {
 }
 dependencies {
     // Compose UI and Material3 dependencies
-    implementation("androidx.compose.ui:ui:1.4.0")
+    implementation("androidx.compose.ui:ui:1.5.4")
     implementation("androidx.compose.material3:material3:1.2.0")  // Ensure consistency
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
     implementation("androidx.navigation:navigation-compose:2.7.5") // Update to match material3 version
@@ -85,10 +85,18 @@ dependencies {
 
     // Coroutine dependency
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation ("androidx.compose.foundation:foundation:1.5.4")
+    implementation ("androidx.compose.animation:animation:1.5.4")
+
 }
 dependencies {
     implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.4.0-alpha09")
 }
+dependencies {
+    implementation ("androidx.compose.material:material-icons-extended:1.4.3")
+}
+
+
 
 
 

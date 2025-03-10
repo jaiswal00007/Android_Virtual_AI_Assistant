@@ -89,9 +89,11 @@ class MainActivity : AppCompatActivity() {
         var c = 0
         lottieAnimationView2.cancelAnimation()
         micBtn.setOnClickListener {
+//            openApp.toggleFlashlight(true)
+            openApp.open_app("twitter")
 
-            val intent = Intent(this@MainActivity, MainActivity2::class.java)
-            startActivity(intent)
+//            val intent = Intent(this@MainActivity, MainActivity2::class.java)
+//            startActivity(intent)
 
 
 //            val x=openApp.getBatteryPercentage(this)
