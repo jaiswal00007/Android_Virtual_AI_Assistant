@@ -30,17 +30,22 @@ class MainActivity : AppCompatActivity() {
     private lateinit var texttospeech: TextToSpeechHelper
     private var recognizedSpeech: String = ""
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val intent = Intent(this@MainActivity, MainActivity2::class.java)
         var openApp = functionality(this)
-        setContentView(R.layout.activity_main)
+//        setContentView(R.layout.activity_main)
+
+        startActivity(intent)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
 
         }
+
 
 
 
@@ -90,10 +95,9 @@ class MainActivity : AppCompatActivity() {
         lottieAnimationView2.cancelAnimation()
         micBtn.setOnClickListener {
 //            openApp.toggleFlashlight(true)
-            openApp.open_app("twitter")
+//            openApp.open_app("twitter")
 
-//            val intent = Intent(this@MainActivity, MainActivity2::class.java)
-//            startActivity(intent)
+
 
 
 //            val x=openApp.getBatteryPercentage(this)

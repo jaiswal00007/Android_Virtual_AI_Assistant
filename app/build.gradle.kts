@@ -59,43 +59,59 @@ dependencies {
 
 }
 dependencies {
-    implementation("com.airbnb.android:lottie:6.6.2")
+    implementation(libs.lottie)
 }
 dependencies {
     implementation(libs.tensorflow.lite.support)
     implementation(libs.tensorflow.lite.metadata)
-    implementation ("com.squareup.okhttp3:okhttp:4.9.3")  // For API requests
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")  // For API requests
     implementation ("org.json:json:20210307") // For handling JSON responses
 }
+
 dependencies {
-    // Compose UI and Material3 dependencies
-    implementation("androidx.compose.ui:ui:1.5.4")
-    implementation("androidx.compose.material3:material3:1.2.0")  // Ensure consistency
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
-    implementation("androidx.navigation:navigation-compose:2.7.5") // Update to match material3 version
 
-    // Activity Compose
-    implementation("androidx.activity:activity-compose:1.8.2")
+    val composeBom = platform("androidx.compose:compose-bom:2025.02.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
 
-    // ViewModel for Compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    // Choose one of the following:
+    // Material Design 3
+    implementation("androidx.compose.material3:material3")
+    // or Material Design 2
+    implementation("androidx.compose.material:material")
+    // or skip Material Design and build directly on top of foundational components
+    implementation("androidx.compose.foundation:foundation")
+    // or only import the main APIs for the underlying toolkit systems,
+    // such as input and measurement/layout
+    implementation("androidx.compose.ui:ui")
 
-    // Lottie animations (optional for typing indicator)
-    implementation("com.airbnb.android:lottie-compose:6.1.0")
+    // Android Studio Preview support
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    debugImplementation("androidx.compose.ui:ui-tooling")
 
-    // Coroutine dependency
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation ("androidx.compose.foundation:foundation:1.5.4")
-    implementation ("androidx.compose.animation:animation:1.5.4")
+    // UI Tests
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // Optional - Included automatically by material, only add when you need
+    // the icons but not the material library (e.g. when using Material3 or a
+    // custom design system based on Foundation)
+    implementation("androidx.compose.material:material-icons-core")
+    // Optional - Add full set of material icons
+    implementation("androidx.compose.material:material-icons-extended")
+    // Optional - Add window size utils
+    implementation("androidx.compose.material3.adaptive:adaptive")
+
+    // Optional - Integration with activities
+    implementation("androidx.activity:activity-compose:1.10.0")
+    // Optional - Integration with ViewModels
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.5")
+    // Optional - Integration with LiveData
+    implementation("androidx.compose.runtime:runtime-livedata")
+    // Optional - Integration with RxJava
+    implementation("androidx.compose.runtime:runtime-rxjava2")
 
 }
-dependencies {
-    implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.4.0-alpha09")
-}
-dependencies {
-    implementation ("androidx.compose.material:material-icons-extended:1.4.3")
-}
-
 
 
 
